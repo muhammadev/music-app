@@ -1,0 +1,82 @@
+* {
+	margin:0; padding:0;
+	box-sizing: border-box;
+}
+
+.ball {
+	width: 35px; height: 35px;
+	border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    transform: translateX(-50%);
+    animation: jumb 1s ease;
+}
+
+@keyframes jumb {
+	0% {
+		bottom:0;
+	}
+	50% {
+		bottom: 200px;
+	}
+	100% {
+		bottom:0;
+	}
+}
+
+.pads {
+	width:100%; height: 100px;
+	display: flex;
+	position: absolute;
+	bottom:0;
+	/*transform: translateY(-50%);*/
+}
+
+.pad {
+	position: relative;
+	flex-grow: 1;
+	cursor: pointer;
+}
+
+.pad:hover {
+	filter: brightness(98%);
+}
+
+.one {
+	background: #4CAF50;
+}
+
+
+.two {
+	background: #8BC34A;
+}
+
+.three {
+	background: #CDDC39;
+}
+
+
+.four {
+	background: #FFEB3B;
+}
+
+
+.five {
+	background: #FFC107;
+}
+
+.six {
+	background: #FF9800;
+}
+
+.seven {
+	background: #FF5722;
+}
+
+.eight {
+	background: #F44336;
+}
+
+.nine {
+	background: #E91E63;
+}
