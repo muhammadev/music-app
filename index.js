@@ -71,8 +71,11 @@ for (let i=0; i < originals.length; i++) {
 window.addEventListener("keydown", function(e) {
 	for (let i=0; i < originalsKeys.length; i++) {
 		if (e.code === originalsKeys[i]) {
-			playSound(i);
-			makeBalls(i);
+			pads[i].click();
+			pads[i].classList.add("active");
+			window.addEventListener("keyup", function() {
+				pads[i].classList.remove("active");
+			})
 		}
 	}
 })
