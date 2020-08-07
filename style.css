@@ -31,21 +31,23 @@ h1 {
 	}
 	20% {
 		height: 60px;
-		width: 25px;
+		width: 20px;
 	}
 	35% {
 		height: 35px;
 		width: 35px;
 	}
 	50% {
-		bottom: calc(var(--height) + var(--ballTop));
+		bottom: calc(var(--height) + var(--ballTop) + 150px);
 	}
-/*	60% {
-		height: 35px;
+	85% {
+		height: 60px;
+		width: 20px;
 	}
-*/	100% {
+	100% {
 		bottom: calc(var(--height) - var(--ballTop));
-		/*height: 35px;*/
+		height: 35px;
+		width: 35px;
 	}
 }
 
@@ -54,10 +56,11 @@ h1 {
 	display: flex;
 	position: absolute;
 	bottom:0;
-	/*transform: translateY(-50%);*/
+	flex-wrap: wrap;
 }
 
 .pad {
+	flex-basis: 150px;
 	position: relative;
 	flex-grow: 1;
 	cursor: pointer;

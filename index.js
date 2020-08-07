@@ -43,15 +43,17 @@ let makeBalls = (i) => {
 	ball.classList.add("ball");
 	ball.style.background = colors[i];
 
-	let pad = document.querySelector(".pad");
+	let pad = document.querySelectorAll(".pad")[i];
 	let padWidth = pad.getBoundingClientRect().width;
-	let padX = padWidth * i;
+	let padX = pad.getBoundingClientRect().left;
 	let ballX = padX + (padWidth / 2);
 	ball.style.left = ballX+"px";
-	document.body.append(ball);
+
 	ball.addEventListener("animationend", function() {
 		document.body.removeChild(ball);
 	})
+
+	document.body.append(ball);
 }
 
 let playSound = (i) => {
